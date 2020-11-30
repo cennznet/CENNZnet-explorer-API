@@ -48,49 +48,6 @@ There should be at least one of `extrinsic_index` and `hash` in the request body
 
 **Body**
 
-```ts
-{
-  code: number;
-  message: string;
-  ttl: number;
-  data: {
-      {
-        account_id: string;
-        block_num: number;
-        block_timestamp: number;
-        extrinsic_index: string;
-        extrinsic_hash: string;
-        success: boolean; // determinate a tx is a successful one 
-        call_module: string;
-        call_module_function: string;
-        params: string;
-        fee: string;
-        tip?: string;
-        finalized: boolean;
-        event?: [
-          {  
-            event_index: string;
-            block_num: number;
-            extrinsic_idx?: number;
-            module_id: string;
-            event_id: string;
-            params: string;
-            extrinsic_hash?: string;
-            event_idx: number;
-            finalized: boolean;
-          }
-        ];
-        signature: string;
-      }
-  }
-}
-
-
-```
-
-
-**Example**
-
 ```json
 {
     "code": 0,

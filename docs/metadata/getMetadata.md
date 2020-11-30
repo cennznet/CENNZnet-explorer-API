@@ -17,36 +17,6 @@ Do not need to supply a request body with this method.
 
 **Body**
 
-```ts
-{
-  code: number;
-  message: string;
-  ttl: number;
-  data: {
-    addressType: number;
-    blockTime: number;
-    balanceAccuracy: number;
-    commissionAccuracy: number;
-    blockNum: number;
-    count_event: number;
-    count_extrinsic: number;
-    count_signed_extrinsic: number;
-    finalized_blockNum: number;
-    implName: string;
-    specVersion: number;
-    networkNode: string;
-    eraLength: number;
-    eraProgress: number;
-    current_validator_count: number;
-    count_transfer: number;
-  }
-}
-
-```
-
-
-**Example**
-
 ```json
 {
     "code": 0,

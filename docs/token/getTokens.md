@@ -17,28 +17,6 @@ Do not need to supply a request body with this method.
 
 **Body**
 
-```ts
-{
-    code: number;
-    message: string;
-    ttl: number;
-    data: {
-        detail: Record<string, {
-          symbol: string,
-          accuracy: number,
-          id: number,
-          total_issuance: string,
-          available_balance: string,
-          locked_balance: string
-        }>
-        token: string[]
-    }
-}
-```
-
-
-**Example**
-
 ```json
 {{
     "code": 0,
