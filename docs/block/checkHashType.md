@@ -29,7 +29,7 @@ Check whether a hash is an extrinsic hash or a block hash
 
 ## Success Response
 
-**Condition** : The hash is a valid exist
+**Condition** : The hash is a valid block hash or extrinsic hash
 
 **Code** : `201 CREATED`
 
@@ -48,7 +48,7 @@ Check whether a hash is an extrinsic hash or a block hash
 
 ## Error Responses
 
-**Condition** : The hash is not exist
+**Condition** : The hash is not a valid block hash or extrinsic hash
 
 **Code** : `404 Not Found`
 
