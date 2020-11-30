@@ -1,6 +1,6 @@
 # Get Extrinsic
 
-Get Extrinsic Detail by extrinsic hash or by extrinsic index
+Get block information
 
 **Method** : `POST`
 
@@ -11,85 +11,42 @@ Get Extrinsic Detail by extrinsic hash or by extrinsic index
 
 ```ts
 {
-  extrinsic_index: string;
+  block_num: number;
 }
 ```
 or
 ```ts
 {
-  hash: string;
+  block_hash: string;
 }
 ```
-There should be at least one of `extrinsic_index` and `hash` in the request body.
+There should be at least one of `block_num` and `block_hash` in the request body.
 
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
-|extrinsic_index|Must exist if `hash` is not exist|string|extrinsic_index is the combination of the block number and the extrinsic index in that block.<br>For example, for the 2nd extrinsic in block 280000, `extrinsic_index` is `280000-2`|
-|hash|Must exist if `extrinsic_index` is not exist|string|Extrinsic hash|
+|block_num|Must exist if `block_hash` is not exist|number|Block number|
+|block_hash|Must exist if `block_num` is not exist|string|Block hash|
 
 
 **Example** 
 ```json
 {
-	"hash": "0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea"
+	"block_num": 2800000
 }
 ```
 ```json
 {
-  "extrinsic_index": "3779709-1"
+	"block_hash": "0x1ab5bcc30bb2f3b2fb6cdd2a737c506184bd29f131dd050b5073990880d0a1ff"
 }
 ```
 
 ## Success Response
 
-**Condition** : At least one of `extrinsic_index` and `hash` is in request body and is valid
+**Condition** : At least one of `block_num` and `block_hash` is in request body and is valid
 
 **Code** : `201 CREATED`
 
 **Body**
-
-```ts
-{
-  code: number;
-  message: string;
-  ttl: number;
-  data: {
-      {
-        account_id: string;
-        block_num: number;
-        block_timestamp: number;
-        extrinsic_index: string;
-        extrinsic_hash: string;
-        success: boolean; // determinate a tx is a successful one 
-        call_module: string;
-        call_module_function: string;
-        params: string;
-        fee: string;
-        tip?: string;
-        finalized: boolean;
-        event?: [
-          {  
-            event_index: string;
-            block_num: number;
-            extrinsic_idx?: number;
-            module_id: string;
-            event_id: string;
-            params: string;
-            extrinsic_hash?: string;
-            event_idx: number;
-            finalized: boolean;
-          }
-        ];
-        signature: string;
-      }
-  }
-}
-
-
-```
-
-
-**Example**
 
 ```json
 {
@@ -97,30 +54,87 @@ There should be at least one of `extrinsic_index` and `hash` in the request body
     "message": "Success",
     "ttl": 1,
     "data": {
-        "account_id": "5FLXuBZYiz7q2ZV8xV8bmkC6BVuGoiwBqT7jXL93eWz3jMRW",
-        "block_num": 3779709,
-        "block_timestamp": 1605669700,
-        "extrinsic_index": "3779709-1",
-        "extrinsic_hash": "0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea",
-        "call_module": "syloGroups",
-        "call_module_function": "updateMember",
-        "params": "[{\"name\":\"group_id\",\"type\":\"Hash\",\"value\":\"0x106851423c9fb772de97ab014bba76006e48c0d845acaddb377854bc57c51452\"},{\"name\":\"meta\",\"type\":\"Meta\",\"value\":[[\"chat:message:HEAD\",\"\\\"QmNxXEgMcfCVgdVD1pZBGPRQxLxjZ28m2js21mpRmSrq7i\\\"\"]]}]",
-        "fee": "1000000000000",
-        "tip": null,
+        "hash": "0x1ab5bcc30bb2f3b2fb6cdd2a737c506184bd29f131dd050b5073990880d0a1ff",
+        "block_num": 2800000,
+        "block_timestamp": 1600065420,
+        "event_count": 2,
+        "extrinsics_count": 2,
+        "validator": "5FpNQ5NfhhRMyE1BMCy7fwPXHtd8ht6mME64AFr58y2ehesc",
         "finalized": true,
-        "success": true,
-        "signature": "0x41876536e3a63a906b1c49bd448dd8d97f73d2f181e4b96524b293fcccd81c04828cca95a87820d7d4f4962b5584ead08df1682ae1fae21da95cb0ee306f4904",
-        "event": [
+        "extrinsics_root": "0xff973cbe567f08691a59b28e919ec26ec13d286eb5391c3cc366ded0072cf168",
+        "parent_hash": "0x2c0ef3e639532fbf860f7ecc9cb0c6beab74a08feb06c7e292d013dc3199d892",
+        "state_root": "0xee23109354d89e503103a859e910e096e3f974818dec32d70633b1bc2d0bf37c",
+        "spec_version": 36,
+        "extrinsics": [
             {
-                "event_index": "3779709-1",
-                "block_num": 3779709,
+                "account_id": "5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM",
+                "block_num": 2800000,
+                "block_timestamp": 1600065420,
+                "extrinsic_index": "2800000-0",
+                "extrinsic_hash": "0x5df0999b89a7b8ad70f5a03bb07b2bbb8ab55606278b5004e0779a7e52a883f0",
+                "call_module": "timestamp",
+                "call_module_function": "set",
+                "params": "[{\"name\":\"now\",\"type\":\"Compact<Moment>\",\"value\":1600065420000}]",
+                "fee": "0",
+                "tip": null,
+                "finalized": true,
+                "success": true,
+                "signature": null
+            },
+            {
+                "account_id": "5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM",
+                "block_num": 2800000,
+                "block_timestamp": 1600065420,
+                "extrinsic_index": "2800000-1",
+                "extrinsic_hash": "0x81cd5c07eb3e767c32107e0a2fee1b94f42c89dbf452435016ffd8c6cfcd412e",
+                "call_module": "finalityTracker",
+                "call_module_function": "finalHint",
+                "params": "[{\"name\":\"hint\",\"type\":\"Compact<BlockNumber>\",\"value\":2799995}]",
+                "fee": "0",
+                "tip": null,
+                "finalized": true,
+                "success": true,
+                "signature": null
+            }
+        ],
+        "events": [
+            {
+                "event_index": "2800000-0",
+                "block_num": 2800000,
                 "module_id": "system",
                 "event_id": "ExtrinsicSuccess",
-                "params": "[{\"type\":\"DispatchInfo\",\"value\":{\"weight\":100000,\"class\":\"Normal\",\"paysFee\":true}}]",
+                "params": "[{\"type\":\"DispatchInfo\",\"value\":{\"weight\":10000,\"class\":\"Operational\",\"paysFee\":true}}]",
+                "event_idx": 0,
+                "finalized": true,
+                "extrinsic_hash": "0x5df0999b89a7b8ad70f5a03bb07b2bbb8ab55606278b5004e0779a7e52a883f0",
+                "extrinsic_idx": 0
+            },
+            {
+                "event_index": "2800000-1",
+                "block_num": 2800000,
+                "module_id": "system",
+                "event_id": "ExtrinsicSuccess",
+                "params": "[{\"type\":\"DispatchInfo\",\"value\":{\"weight\":10000,\"class\":\"Normal\",\"paysFee\":true}}]",
                 "event_idx": 1,
                 "finalized": true,
-                "extrinsic_hash": "0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea",
+                "extrinsic_hash": "0x81cd5c07eb3e767c32107e0a2fee1b94f42c89dbf452435016ffd8c6cfcd412e",
                 "extrinsic_idx": 1
+            }
+        ],
+        "logs": [
+            {
+                "block_num": 2800000,
+                "log_index": "2800000-0",
+                "log_type": "PreRuntime",
+                "origin_type": "PreRuntime",
+                "data": "{\"data\":\"0x02060000001c03131300000000\",\"engine\":1161969986}"
+            },
+            {
+                "block_num": 2800000,
+                "log_index": "2800000-1",
+                "log_type": "Seal",
+                "origin_type": "Seal",
+                "data": "{\"data\":\"0xee71d59474eb1674eb9c1ae21effef949a08fd3384992e3e6c9e495fda1a8a18de491b2e40caefdaf4918e294850bfa77c304eb02ded4718c58474e5be6aa087\",\"engine\":1161969986}"
             }
         ]
     }
@@ -140,8 +154,8 @@ There should be at least one of `extrinsic_index` and `hash` in the request body
 {
     "statusCode": 400,
     "message": [
-        "extrinsic_index must be a string",
-        "hash must be a string"
+        "block_num must be a positive number",
+        "block_hash must be a string"
     ],
     "error": "Bad Request"
 }
@@ -149,7 +163,7 @@ There should be at least one of `extrinsic_index` and `hash` in the request body
 
 ### Or
 
-**Condition** : The extrinsic is not exist
+**Condition** : The block is not exist
 
 **Code** : `404 Not Found`
 
