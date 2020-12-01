@@ -20,7 +20,7 @@ or
   hash: string;
 }
 ```
-There should be at least one of `extrinsic_index` and `hash` in the request body.
+There should be at least one of `extrinsic_index` or `hash` in the request body.
 
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
