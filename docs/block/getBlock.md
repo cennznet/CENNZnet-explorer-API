@@ -1,4 +1,4 @@
-# Get Extrinsic
+# Get Block
 
 Get block information
 
