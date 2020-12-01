@@ -106,7 +106,7 @@ There should be at least one of `extrinsic_index` or `hash` in the request body.
 
 ### Or
 
-**Condition** : The extrinsic is not exist
+**Condition** : The extrinsic does not exist
 
 **Code** : `404 Not Found`
 
