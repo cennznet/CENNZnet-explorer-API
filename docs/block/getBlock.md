@@ -143,7 +143,7 @@ There should be at least one of `block_num` or `block_hash` in the request body.
 
 ## Error Responses
 
-**Condition** : `extrinsic_index` and `hash` are both not exist in request body
+**Condition** : Neither `block_num` or `block_hash` was found in the request body
 
 **Code** : `400 Bad Request`
 
