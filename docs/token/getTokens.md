@@ -18,7 +18,7 @@ Do not need to supply a request body with this method.
 **Body**
 
 ```json
-{{
+{
     "code": 0,
     "message": "Success",
     "ttl": 1,
