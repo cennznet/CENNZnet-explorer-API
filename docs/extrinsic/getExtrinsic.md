@@ -42,7 +42,7 @@ There should be at least one of `extrinsic_index` or `hash` in the request body.
 
 ## Success Response
 
-**Condition** : At least one of `extrinsic_index` and `hash` is in request body and is valid
+**Condition** : At least one of `extrinsic_index` or `hash` is in request body and is valid
 
 **Code** : `201 CREATED`
 
