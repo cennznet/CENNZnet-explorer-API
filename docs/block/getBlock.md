@@ -163,7 +163,7 @@ There should be at least one of `block_num` or `block_hash` in the request body.
 
 ### Or
 
-**Condition** : The block is not exist
+**Condition** : The block does not exist
 
 **Code** : `404 Not Found`
 
