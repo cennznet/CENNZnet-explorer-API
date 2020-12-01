@@ -86,7 +86,7 @@ There should be at least one of `extrinsic_index` or `hash` in the request body.
 
 ## Error Responses
 
-**Condition** : `extrinsic_index` and `hash` are both not exist in request body
+**Condition** : Neither `extrinsic_index` or `hash` found in request body
 
 **Code** : `400 Bad Request`
 
