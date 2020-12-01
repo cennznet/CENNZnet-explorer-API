@@ -42,7 +42,7 @@ There should be at least one of `block_num` or `block_hash` in the request body.
 
 ## Success Response
 
-**Condition** : At least one of `block_num` and `block_hash` is in request body and is valid
+**Condition** : At least one of `block_num` or `block_hash` is in request body and is valid
 
 **Code** : `201 CREATED`
 
