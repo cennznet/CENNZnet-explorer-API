@@ -20,7 +20,7 @@ or
   block_hash: string;
 }
 ```
-There should be at least one of `block_num` and `block_hash` in the request body.
+There should be at least one of `block_num` or `block_hash` in the request body.
 
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
