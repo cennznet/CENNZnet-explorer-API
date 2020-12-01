@@ -1,4 +1,4 @@
-# Get Extrinsic
+# Get Tokens
 
 Get token list
 
