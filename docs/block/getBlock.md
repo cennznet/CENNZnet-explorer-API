@@ -2,24 +2,17 @@
 
 Get block information
 
-**Method** : `POST`
+**Method** : `GET`
 
-**URL** : `/api/scan/block`
+**URL** : 
+
+`/api/scan/block?block_num={block_number}`
+
+`/api/scan/block?block_hash={block_hash}`
 
 
-## Request Body
+## Request Query Parameters
 
-```ts
-{
-  block_num: number;
-}
-```
-or
-```ts
-{
-  block_hash: string;
-}
-```
 There should be at least one of `block_num` or `block_hash` in the request body.
 
 | Parameter | IsOptional | Type | Description |
@@ -29,20 +22,14 @@ There should be at least one of `block_num` or `block_hash` in the request body.
 
 
 **Example** 
-```json
-{
-	"block_num": 2800000
-}
-```
-```json
-{
-	"block_hash": "0x1ab5bcc30bb2f3b2fb6cdd2a737c506184bd29f131dd050b5073990880d0a1ff"
-}
-```
+
+`api/scan/block?block_num=1`
+
+`api/scan/block?block_hash=0x823983906e0bb27944e10b19ee4c2515be1731ce8c4cb19a4db4574fed4f2c80`
 
 ## Success Response
 
-**Condition** : At least one of `block_num` or `block_hash` is in request body and is valid
+**Condition** : At least one of `block_num` or `block_hash` is exist and is valid
 
 **Code** : `201 CREATED`
 
@@ -143,7 +130,7 @@ There should be at least one of `block_num` or `block_hash` in the request body.
 
 ## Error Responses
 
-**Condition** : Neither `block_num` or `block_hash` was found in the request body
+**Condition** : Neither `block_num` or `block_hash` was found
 
 **Code** : `400 Bad Request`
 

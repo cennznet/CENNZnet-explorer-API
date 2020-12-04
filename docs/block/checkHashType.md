@@ -7,7 +7,7 @@ Check whether a hash is an extrinsic hash or a block hash
 **URL** : `/api/scan/check_hash?hash={hash}`
 
 
-## Request parameter
+## Request Query Parameters
 
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
@@ -16,8 +16,7 @@ Check whether a hash is an extrinsic hash or a block hash
 
 **Example** 
 
-`/api/scan/check_hash?hash=0x1ab5bcc30bb2f3b2fb6cdd2a737c506184bd29f131dd050b5073990880d0a1ff
-`
+`/api/scan/check_hash?hash=0x1ab5bcc30bb2f3b2fb6cdd2a737c506184bd29f131dd050b5073990880d0a1ff`
 
 ## Success Response
 

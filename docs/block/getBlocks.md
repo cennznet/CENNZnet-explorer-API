@@ -2,19 +2,13 @@
 
 Get blocks
 
-**Method** : `POST`
+**Method** : `GET`
 
-**URL** : `/api/scan/blocks`
+**URL** : `/api/scan/blocks?row={row}&page={page}`
 
 
-## Request Body
+## Request Query Parameters
 
-```ts
-{
-  row: number; // max 100
-  page: number;
-}
-```
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
 |row|No|number|Specify the number of records to return in one request, specified as an integer from 1 to 100.|
@@ -22,12 +16,8 @@ Get blocks
 
 
 **Example** 
-```json
-{
-  "row": 1, 
-  "page": 0
-}
-```
+
+`/api/scan/blocks?row=1&page=0`
 
 ## Success Response
 

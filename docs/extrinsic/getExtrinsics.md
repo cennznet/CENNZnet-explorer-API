@@ -2,21 +2,13 @@
 
 Get Extrinsics
 
-**Method** : `POST`
+**Method** : `GET`
 
-**URL** : `/api/scan/extrinsics`
+**URL** : `/api/scan/extrinsics?signed={signed}&address={address}&row={row}&page={page}`
 
 
-## Request Body
+## Request Query Parameters
 
-```ts
-{
-  signed: 'signed' | 'all';
-  address?: string;
-  row: number; // max 100
-  page: number;
-}
-```
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
 |signed|No|enum ('signed', 'all')|Get only signed extrinsics|
@@ -26,14 +18,8 @@ Get Extrinsics
 
 
 **Example** 
-```json
-{
-  "row": 1, 
-  "page": 0, 
-  "signed": "signed",
-  "address": "5FLXuBZYiz7q2ZV8xV8bmkC6BVuGoiwBqT7jXL93eWz3jMRW"
-}
-```
+
+`/api/scan/extrinsics?signed=signed&address=5FLXuBZYiz7q2ZV8xV8bmkC6BVuGoiwBqT7jXL93eWz3jMRW&row=1&page=0`
 
 ## Success Response
 

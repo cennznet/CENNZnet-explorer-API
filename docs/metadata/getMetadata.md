@@ -2,14 +2,9 @@
 
 Get Basic Chain Information
 
-**Method** : `POST`
+**Method** : `GET`
 
 **URL** : `/api/scan/metadata`
-
-
-## Request Body
-
-Do not need to supply a request body with this method.
 
 ## Success Response
 

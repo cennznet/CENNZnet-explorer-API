@@ -4,25 +4,43 @@ The CENNZnet explorer APIs are provided as a community service to access CENNZne
 
 Metadata apis
 ---
-[Get Metadata](./docs/metadata/getMetadata.md) : `Post /api/scan/metadata`
+[Get Metadata](./docs/metadata/getMetadata.md) :
+
+`GET /api/scan/metadata`
 
 Token apis
 ---
-[Get Token List](./docs/token/getTokens.md) : `Post /api/scan/token`
+[Get Token List](./docs/token/getTokens.md) : 
+
+`GET /api/scan/tokens`
 
 
 Extrinsic apis
 ---
-[Get Extrinsic List](./docs/extrinsic/getExtrinsics.md) : `Post /api/scan/extrinsics`
+[Get Extrinsic List](./docs/extrinsic/getExtrinsics.md) : 
 
-[Get Extrinsic Detail](./docs/extrinsic/getExtrinsic.md) : `Post /api/scan/extrinsic`
+`GET /api/scan/extrinsics?signed={signed}&address={address}&row={row}&page={page}`
+
+[Get Extrinsic Detail](./docs/extrinsic/getExtrinsic.md) : 
+
+`GET /api/scan/extrinsic?extrinsic_index={extrinsic_index}` 
+
+`GET /api/scan/extrinsic?hash={hash}`
 
 Block apis
 ---
-[Get Block List](./docs/block/getBlocks.md) : `Post /api/scan/blocks`
+[Get Block List](./docs/block/getBlocks.md) : 
 
-[Get Block Detail](./docs/block/getBlock.md) : `Post /api/scan/block`
+`GET /api/scan/blocks?row={row}&page={page}`
 
-[Check Hash Type](./docs/block/checkHashType.md) : `Post /api/scan/block`
+[Get Block Detail](./docs/block/getBlock.md) : 
+
+`GET /api/scan/block?block_num={block_number}`
+
+`GET /api/scan/block?block_hash={block_hash}`
+
+[Check Hash Type](./docs/block/checkHashType.md) : 
+
+`GET /api/scan/check_hash?hash={hash}`
 
 

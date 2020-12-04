@@ -2,14 +2,9 @@
 
 Get token list
 
-**Method** : `POST`
+**Method** : `GET`
 
-**URL** : `/api/scan/token`
-
-
-## Request Body
-
-Do not need to supply a request body with this method.
+**URL** : `/api/scan/tokens`
 
 ## Success Response
 

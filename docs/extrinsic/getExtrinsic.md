@@ -2,25 +2,18 @@
 
 Get Extrinsic Detail by extrinsic hash or by extrinsic index
 
-**Method** : `POST`
+**Method** : `GET`
 
-**URL** : `/api/scan/extrinsic`
+**URL** : 
+
+`/api/scan/extrinsic?extrinsic_index={extrinsic_index}`
+
+`/api/scan/extrinsic?hash={hash}`
 
 
-## Request Body
+## Request Query Parameters
 
-```ts
-{
-  extrinsic_index: string;
-}
-```
-or
-```ts
-{
-  hash: string;
-}
-```
-There should be at least one of `extrinsic_index` or `hash` in the request body.
+There should be at least one of `extrinsic_index` or `hash`.
 
 | Parameter | IsOptional | Type | Description |
 |:----------|:---|:-----|:------------|
@@ -29,20 +22,15 @@ There should be at least one of `extrinsic_index` or `hash` in the request body.
 
 
 **Example** 
-```json
-{
-	"hash": "0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea"
-}
-```
-```json
-{
-  "extrinsic_index": "3779709-1"
-}
-```
+
+`/api/scan/extrinsic?extrinsic_index=3779709-1`
+
+`/api/scan/extrinsic?hash=0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea`
+
 
 ## Success Response
 
-**Condition** : At least one of `extrinsic_index` or `hash` is in request body and is valid
+**Condition** : At least one of `extrinsic_index` or `hash` is valid
 
 **Code** : `201 CREATED`
 
@@ -86,7 +74,7 @@ There should be at least one of `extrinsic_index` or `hash` in the request body.
 
 ## Error Responses
 
-**Condition** : Neither `extrinsic_index` or `hash` found in request body
+**Condition** : Neither `extrinsic_index` or `hash` found
 
 **Code** : `400 Bad Request`
 
