@@ -1,6 +1,6 @@
 # Get Extrinsic
 
-Get Extrinsic Detail by extrinsic hash or by extrinsic index
+Get Extrinsic Detail by extrinsic hash or by extrinsic index. Extrinsic index is the combination of the block number and the extrinsic index.
 
 **Method** : `GET`
 
@@ -92,7 +92,7 @@ There should be at least one of `extrinsic_index` or `hash`.
 }
 ```
 
-### Or
+*Or*
 
 **Condition** : The extrinsic does not exist
 

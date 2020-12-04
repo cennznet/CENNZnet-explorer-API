@@ -67,7 +67,7 @@ Get Extrinsics
 **Code** : `400 Bad Request`
 
 
-### Or
+*Or*
 
 **Condition** : If `signed` is not a valid enum value
 
