@@ -23,9 +23,9 @@ Get Extrinsics
 
 **Example** 
 
-`/api/scan/extrinsics?signed=signed&row=1&page=0`
+Get the last 10 signed extrinsics: `/api/scan/extrinsics?signed=signed&row=10&page=0`
 
-`/api/scan/extrinsics?signed=signed&address=5FLXuBZYiz7q2ZV8xV8bmkC6BVuGoiwBqT7jXL93eWz3jMRW&row=1&page=0`
+Get the last 10 signed extrinsics of a specific account: `/api/scan/extrinsics?signed=signed&address=5FLXuBZYiz7q2ZV8xV8bmkC6BVuGoiwBqT7jXL93eWz3jMRW&row=10&page=0`
 
 ## Success Response
 

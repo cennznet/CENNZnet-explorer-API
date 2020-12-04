@@ -23,9 +23,9 @@ There should be at least one of `extrinsic_index` or `hash`.
 
 **Example** 
 
-`/api/scan/extrinsic?extrinsic_index=3779709-1`
+Get an extrinsic with a specific extrinsic index: `/api/scan/extrinsic?extrinsic_index=3779709-1`
 
-`/api/scan/extrinsic?hash=0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea`
+Get an extrinsic with a specific extrinsic hash: `/api/scan/extrinsic?hash=0xbe3781892d397395afdde9086cc0028426612468bd37841241284e92facf34ea`
 
 
 ## Success Response

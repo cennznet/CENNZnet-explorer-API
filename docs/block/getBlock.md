@@ -22,9 +22,9 @@ There should be at least one of `block_num` or `block_hash` in the request body.
 
 **Example** 
 
-Get a block with specific number: `api/scan/block?block_num=1`
+Get a block with specific block number: `api/scan/block?block_num=1`
 
-Get a block with specific hash: `api/scan/block?block_hash=0x823983906e0bb27944e10b19ee4c2515be1731ce8c4cb19a4db4574fed4f2c80`
+Get a block with specific block hash: `api/scan/block?block_hash=0x823983906e0bb27944e10b19ee4c2515be1731ce8c4cb19a4db4574fed4f2c80`
 
 
 ## Success Response
