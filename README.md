@@ -19,6 +19,8 @@ Extrinsic apis
 ---
 [Get Extrinsic List](./docs/extrinsic/getExtrinsics.md) : 
 
+`GET /api/scan/extrinsics?signed={signed}&row={row}&page={page}`
+
 `GET /api/scan/extrinsics?signed={signed}&address={address}&row={row}&page={page}`
 
 [Get Extrinsic Detail](./docs/extrinsic/getExtrinsic.md) : 

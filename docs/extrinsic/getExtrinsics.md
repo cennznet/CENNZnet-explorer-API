@@ -4,7 +4,11 @@ Get Extrinsics
 
 **Method** : `GET`
 
-**URL** : `/api/scan/extrinsics?signed={signed}&address={address}&row={row}&page={page}`
+**URL** : 
+
+`/api/scan/extrinsics?signed={signed}&row={row}&page={page}`
+
+`/api/scan/extrinsics?signed={signed}&address={address}&row={row}&page={page}`
 
 
 ## Request Query Parameters
@@ -18,6 +22,8 @@ Get Extrinsics
 
 
 **Example** 
+
+`/api/scan/extrinsics?signed=signed&row=1&page=0`
 
 `/api/scan/extrinsics?signed=signed&address=5FLXuBZYiz7q2ZV8xV8bmkC6BVuGoiwBqT7jXL93eWz3jMRW&row=1&page=0`
 
