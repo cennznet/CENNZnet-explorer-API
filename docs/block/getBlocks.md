@@ -17,7 +17,7 @@ Get blocks
 
 **Example** 
 
-`/api/scan/blocks?row=1&page=0`
+Get the latest 100 blocks: `/api/scan/blocks?row=100&page=0`
 
 ## Success Response
 
